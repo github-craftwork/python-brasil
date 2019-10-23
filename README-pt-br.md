@@ -22,4 +22,4 @@ Tente descobrir como tudo isso funcionou enquanto esperamos o restante do grupo 
 
 Depois de ter entendido o funcionamento desta ação o suficiente, compare seu entendimento com a explicação logo abaixo - clique no link para abri-la.
 
-[Consulte a explicação] (workshop/parte0-explanação.md) ou [inicie a parte 1 deste tutorial](workshop/parte1-hello-world.md)
+[Consulte a explicação] (workshop/pt-br/parte0-explanação.md) ou [inicie a parte 1 deste tutorial](workshop/parte1-hello-world.md)
