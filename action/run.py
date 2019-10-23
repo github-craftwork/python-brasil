@@ -20,7 +20,7 @@ print("-------------------------------------------------")
 if ".invite" in comment and len(comment.split()) == 2:
     r = requests.get(url = API_ENDPOINT)
     
-    print("Member Status: " + r.status_code)
+    print("Member Status: " + str(r.status_code))
 
     if r.status_code == 200:
         exit(78)
