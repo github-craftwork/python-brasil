@@ -85,7 +85,8 @@ def test_empty():
 
 The result of that last push to master should look like this image:
 
-![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1570060795895_Screenshot+2019-10-02+16.59.26.png)
+![](https://user-images.githubusercontent.com/4427768/67440385-8599df00-f5cf-11e9-9152-e0f19a5e8527.png)
+
 
 Add the above test using the UI, but instead of committing directly to the master branch, open a pull request to trigger you CI workflow again.. 
 
