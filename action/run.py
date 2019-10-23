@@ -19,6 +19,8 @@ print("-------------------------------------------------")
 
 if ".invite" in comment and len(comment.split()) == 2:
     r = requests.get(url = API_ENDPOINT)
+    
+    print("Member Status: " + r.status_code)
 
     if r.status_code == 200:
         exit(78)
@@ -26,7 +28,7 @@ if ".invite" in comment and len(comment.split()) == 2:
     headers={'Authorization': os.getenv('GITHUB_TOKEN')}
 
     h = requests.post(url = API_ENDPOINT2, headers = headers)
-    print(h.text)
+    print("Invite: " + h.text)
 
 print("-------------------------------------------------")
 
