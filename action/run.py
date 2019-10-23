@@ -15,7 +15,7 @@ API_ENDPOINT1 = "https://api.github.com/organizations/55258788/public_members/" 
 API_ENDPOINT2 = "https://api.github.com/users/" + commenter
 API_ENDPOINT3 = "https://api.github.com/orgs/github-craftwork/invitations"
 
-event = json.loads(open(os.getenv('GITHUB_EVENT_PATH')))
+event = os.getenv('GITHUB_EVENT_PATH')
 print(event)
 
 print("-------------------------------------------------")
