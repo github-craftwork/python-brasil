@@ -94,23 +94,8 @@ We have not created a pull request until now, so please take note that you can s
 ![CI pass](https://user-images.githubusercontent.com/5713670/67408875-3b9e0280-f5a9-11e9-8751-da299236cbbb.png)
 
 Once all test have passed, merge the pull request and let us move on to complete the next step. 
-
-## Part 3b: Add Lint script
-Our project is includes, a linter by default.
-
-Check in you `pythonpackage.yml` and you will find that we are using.
-
-To do this we will use the [Python Linting GitHub Action](https://github.com/marketplace/actions/python-linting) Action.
-
-![Screenshot 2019-10-09 16 48 12](https://user-images.githubusercontent.com/5713670/67406408-8fa6e800-f5a5-11e9-846f-c8dfb8f97841.png)
-
-**Add formatter workflow**
-Make the folling change to your code, in the `XXXXX.py` file and open a pull request with this change.
-
-```py
-```
     
-## Part 3c: Draft and Auto publish a release
+## Part 3b: Draft and Auto publish a release
 CI is often coupled with the idea of Continuous Delivery (CD). The next two sections will cover automating your projects release management.
 
 **Add release workflow**
@@ -145,12 +130,9 @@ Create the following `.github/release-drafter.yml`  file in a repository and com
       $CHANGES
 
 **Make a change**
-Navigate to your package.json file in the repo and replace the contents with your details. Be sure to create merge a PR for this change instead of write to master.
+Navigate to any file in the repo and replace the contents with your something else. 
 
 Change:  Swap out my name with your handle and commit that to master.
-
-![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1569515320558_Screenshot+2019-09-26+09.27.43.png)
-
 
 As pull requests are merged, a draft release is kept up-to-date listing the changes, ready to publish when you’re ready:
 
