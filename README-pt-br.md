@@ -1,5 +1,5 @@
 # Introdução
-Bem-vindo à folha de dicas do Craftwork! Esta página tem tudo o que você precisa para concluir o tutorial da Craftwork. Se você chegar a ver o próximo passo ou tiver perguntas que não foram respondidas pelo [FAQ](workshop/FAQ.md), não tenha medo de levantar a mão e nos perguntar!
+Bem-vindo à folha de dicas do Craftwork! Esta página tem tudo o que você precisa para concluir o tutorial da Craftwork. Se você não puder estar presente para a próxima parte deste tutorial ou tiver perguntas que não foram respondidas pelo [FAQ](workshop/FAQ.md), não tenha medo de levantar a mão e nos perguntar!
 
 ## Part 0: Junte-se a organização
 
