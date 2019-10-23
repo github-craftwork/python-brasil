@@ -11,24 +11,34 @@ team_id = 3414353
 # commenter = event["comment"]["user"]["login"]
 commenter = "notBdougie"
 
-API_ENDPOINT = "https://api.github.com/organizations/55258788/public_members/" + commenter
-API_ENDPOINT2 = "https://api.github.com/organizations/55258788/" + commenter
+API_ENDPOINT1 = "https://api.github.com/organizations/55258788/public_members/" + commenter
+API_ENDPOINT2 = "https://api.github.com/users/" + commenter
+API_ENDPOINT3 = "https://api.github.com/orgs/github-craftwork/invitations"
+
+event = json.loads(open(os.getenv('GITHUB_EVENT_PATH')))
+print(event)
 
 print("-------------------------------------------------")
 
 
 if ".invite" in comment and len(comment.split()) == 2:
-    r = requests.get(url = API_ENDPOINT)
-    
-    print("Member Status: " + str(r.status_code))
+    r = requests.get(url = API_ENDPOINT1)
 
     if r.status_code == 200:
         exit(78)
 
-    headers={'Authorization': os.getenv('GITHUB_TOKEN')}
+    p = requests.get(url = API_ENDPOINT2)
 
-    h = requests.post(url = API_ENDPOINT2, headers = headers)
-    print("Invite: " + h.text)
+    id = p.json()['id']
+    print("ID: " + str(id))
+
+    headers={'Authorization': 'token a1da67559b4d9d965eccda58dca9f2b0714788bf',
+             'Accept': 'application/vnd.github.dazzler-preview+json'}
+    data = {"invitee_id": id, "team_ids": [3484670]}
+    # headers={'Authorization': os.getenv('GITHUB_TOKEN')}
+
+    h = requests.post(url = API_ENDPOINT3, data = json.dumps(data), headers = headers)
+    print(h.text)
 
 print("-------------------------------------------------")
 
