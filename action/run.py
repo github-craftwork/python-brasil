@@ -3,14 +3,16 @@ import json
 import requests
 
 event = json.loads(open(os.getenv('GITHUB_EVENT_PATH'), "r"))
-print(event)
-TOKEN = os.getenv('GITHUB_TOKEN')
+print(event.read())
 
 # comment = event["comment"]["body"]
 comment = ".invite me"
 # commenter = event["comment"]["user"]["login"]
 commenter = "notBdougie"
+
 team_id = [3484670]
+
+TOKEN = os.getenv('GITHUB_TOKEN')
 
 API_ENDPOINT1 = "https://api.github.com/organizations/55258788/public_members/" + commenter
 API_ENDPOINT2 = "https://api.github.com/users/" + commenter
