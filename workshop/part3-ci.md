@@ -29,6 +29,7 @@ Commit the `pythonpackage.yml` file to the master branch to complete this proces
 The `.github/workflows/` folder will include the contents from below:
 name: Python application
 
+```
 on: [push]
 
 jobs:
@@ -57,82 +58,58 @@ jobs:
       run: |
         pip install pytest
         pytest
+```
 
 _Take note that our workflow is running a strategy with 3 versions of python. This will be important to know later._ 
 
 Because your new Actions CI is running on everything push, you should already have a workflow running. 
 
-![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1570060483830_Screenshot+2019-10-02+16.53.23.png)
+![python package workflow](https://user-images.githubusercontent.com/5713670/67407777-8d458d80-f5a7-11e9-8827-40d19dde78ad.png)
 
 
 Note that we  will need to a test to run as part of our CI, Find the `index.test.js` file with the contents from below:
 
-```js
-// index.test.js
-const weekNum = require('./index.js');
+```py
+# tests/00_empty_test.py
+def test_empty():
+    """
+    PyTest tests are callables whose names start with "test"
+    (by default)
 
-test('that weekNum returns a value', () => {
-  expect(weekNum).not.toBeNull();
-});
+    It looks for them in modules whose name contains "test"
+    (by default)
+    """
+    pass
+
 ```
 
 The result of that last push to master should look like this image:
 
 ![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1570060795895_Screenshot+2019-10-02+16.59.26.png)
 
-
-Add another test
-Let’s add another test to ensure we have 200% test coverage. 
-
-```js
-const weekNum = require('./index.js');
-
-test('that weekNum returns a value', () => {
-  expect(weekNum).not.toBeNull();
-});
-
-// new test added
-test('that weekNum returns a number', () => {
-  expect(weekNum).toBeDefined();
-});
-```
-
 Add the above test using the UI, but instead of committing directly to the master branch, open a pull request to trigger you CI workflow again.. 
 
 We have not created a pull request until now, so please take note that you can see all the workflows triggering through a GitHub [Check Suite](https://developer.github.com/v3/checks/). All Action Workflows are being powered by this API feature. And since we are on the subject the GitHub Actions bot is built on the [GitHub App](https://developer.github.com/apps/) framework that has already popularized by a number of our [Marketplace](https://github.com/marketplace) and Ecosystem partners.
 
-![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1569480356208_Screenshot+2019-09-25+23.45.04.png)
-
+![CI pass](https://user-images.githubusercontent.com/5713670/67408875-3b9e0280-f5a9-11e9-8751-da299236cbbb.png)
 
 Once all test have passed, merge the pull request and let us move on to complete the next step. 
 
-
 ## Part 3b: Add Lint script
-Our project is missing something else, a linter.
+Our project is includes, a linter by default.
 
-We will create new file separate job in our `pythonpackage.yml`. Call this `lint.yml`.
+Check in you `pythonpackage.yml` and you will find that we are using.
 
 To do this we will use the [Python Linting GitHub Action](https://github.com/marketplace/actions/python-linting) Action.
 
 ![Screenshot 2019-10-09 16 48 12](https://user-images.githubusercontent.com/5713670/67406408-8fa6e800-f5a5-11e9-846f-c8dfb8f97841.png)
 
 **Add formatter workflow**
-Add the following code to your existing `pythonpackage.yml` and open a pull request with this change.
+Make the folling change to your code, in the `XXXXX.py` file and open a pull request with this change.
 
-name: Linting
-
-on: [push]
-
-jobs:
-  styles:
-    runs-on: ubuntu-18.04
-    name: Linting
-    steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-python@v1
-      - uses: whynothugo/python-linting@mastersteps:
+```py
+```
     
-
 ## Part 3c: Draft and Auto publish a release
 CI is often coupled with the idea of Continuous Delivery (CD). The next two sections will cover automating your projects release management.
 
