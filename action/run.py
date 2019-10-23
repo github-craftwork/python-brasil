@@ -10,7 +10,7 @@ comment = ".invite me"
 # commenter = event["comment"]["user"]["login"]
 commenter = "notBdougie"
 
-team_id = [3484670]
+team_ids = [3484670]
 
 TOKEN = os.getenv('GITHUB_TOKEN')
 
