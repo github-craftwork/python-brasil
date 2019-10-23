@@ -67,7 +67,7 @@ Because your new Actions CI is running on everything push, you should already ha
 ![python package workflow](https://user-images.githubusercontent.com/5713670/67407777-8d458d80-f5a7-11e9-8827-40d19dde78ad.png)
 
 
-Note that we  will need to a test to run as part of our CI, Find the `index.test.js` file with the contents from below:
+Note that we will need to write a test to run as part of our CI, Find the `00_empty_test.py` file with the contents from below:
 
 ```py
 # tests/00_empty_test.py
