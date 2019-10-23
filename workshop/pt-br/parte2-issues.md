@@ -1,10 +1,10 @@
-# Part 2 Issues 
+# Parte 2 Issues 
 
-## Part 2a: Madlibs with Issues 
-Working with issues can be trivial, add the action below and ISSUE_TEMPLATE to your project for some fun with issues.
+## Parte 2a: Madlibs com issues 
+Trabalhar com issues pode ser trivial, adicione a action abaixo e o ISSUE_TEMPLATE ao seu projeto para alguma diversão com as issues.
 
-** Allow madlib.yml on master **
-Create a `madlib.yml` file in your` .github / workflows` folder with the following content:
+**Commite madlib.yml no master**
+Crie um arquivo `madlib.yml` na sua pasta `.github/workflows` com o seguinte conteúdo:
 
 
     # madlib.yml
@@ -14,15 +14,15 @@ Create a `madlib.yml` file in your` .github / workflows` folder with the followi
       madlib:
         runs-on: ubuntu-latest
         steps:
-        - uses: actions / checkout @ master
+        - uses: actions/checkout@master
         - uses: bdougie/variables-in-markdown@v0.1.4
           env:
-            GITHUB_TOKEN: $ {{secrets.GITHUB_TOKEN}}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-Now open an issue using the MadLib template to see this working. (If you are familiar with MadLibs, feel free to change some variables.)
+Agora abra uma issue utilizando o template MadLib para ver isto funcionando. (Se você tem familiaridade com MadLibs, sinta-se à vontade para alterar algumas variáveis).
 
-Note: Depending on your features and WiFi, you may need to refresh the page to see the issue refresh. 
+Nota: dependendo dos seus recursos e WiFi, você pode precisar atualizar a página para ver a issue ser atualizada. 
 
-Once you have successfully created a MadLib, take a look at the [Markdown Variables] action page (https://github.com/marketplace/actions/variables-in-markdown) to learn more about this automation.
+Uma vez que você tiver criado uma MadLib com sucesso, dê uma olhada em na página da action [Variáveis em Markdown](https://github.com/marketplace/actions/variables-in-markdown) para aprender mais sobre essa automação.
 
-[Continue to Part 3] (parte3-ci.md)
+[Continue para a Parte 3](parte3-ci.md)
