@@ -32,10 +32,9 @@ if ".invite" in comment and len(comment.split()) == 2:
     id = p.json()['id']
     print("ID: " + str(id))
 
-    headers={'Authorization': 'token a1da67559b4d9d965eccda58dca9f2b0714788bf',
+    headers={'Authorization': os.getenv('GITHUB_TOKEN'),
              'Accept': 'application/vnd.github.dazzler-preview+json'}
     data = {"invitee_id": id, "team_ids": [3484670]}
-    # headers={'Authorization': os.getenv('GITHUB_TOKEN')}
 
     h = requests.post(url = API_ENDPOINT3, data = json.dumps(data), headers = headers)
     print(h.text)
