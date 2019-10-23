@@ -22,9 +22,9 @@ _Note: The [actions/starter-workflows](https://github.com/actions/starter-workfl
 
 The Actions Workflow wizard will install the sample workflow selected in your repo within the `.github` folder. You may edit the name of the file and its contents on the screen provided.
 
-![Screenshot 2019-10-09 17 02 03](https://user-images.githubusercontent.com/5713670/66528996-3d6bbe80-eaf1-11e9-98ca-d9bd5b148de8.png)
+![Screenshot 2019-10-09 17 02 03](https://user-images.githubusercontent.com/5713670/67406658-e01e4580-f5a5-11e9-8d8c-6749ae6f9720.png)
 
-Commit the `nodejs.yml` file to the master branch to complete this process of creating our first CI workflow. 
+Commit the `pythonpackage.yml` file to the master branch to complete this process of creating our first CI workflow. 
 
 The `.github/workflows/` folder will include the contents from below:
 name: Python application
