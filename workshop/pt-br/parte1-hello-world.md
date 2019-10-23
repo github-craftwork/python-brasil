@@ -1,39 +1,39 @@
 
-# Part 1: Hello World
+# Parte 1: Hello World
 
-Start by creating a [new sandbox repository] (https://github.com/organizations/github-craftwork/repositories/new) in the github-craftwork org to keep everything organized. 
+Comece pela criação de um [ novo respositório sandbox](https://github.com/organizations/github-craftwork/repositories/new) na org github-craftwork, para manter tudo organizado. 
 
-! [] (https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1570058137257_Screenshot+2019-10-02+16.12.56.png)
-
-
-_Please add your name to the repository, eg: ** bdougie-sandbox ** _
-
-Your initialized repository already has an action triggered. Click on the Actions tab to see what happens.
-
-! [] (https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1568391143385_Screenshot+2019-09-13+09.12.12.png)
+![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1570058137257_Screenshot+2019-10-02+16.12.56.png)
 
 
-In the Actions tab, you will have a workflow execution for your new ** hello-world action **. Go ahead and click on your workflow to see the logs.
+_Por favor, adicione o seu nome no repositório, ex.: **bdougie-sandbox**_
 
-_Note: These logs are produced by GitHub's [Checks API] (https://developer.github.com/v3/checks/)
+O seu repositório inicializado já tem uma action disparada. Clique na aba Actions para ver o que acontece. 
 
-! [] (https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1570058201382_Screenshot+2019-10-02+16.16.33.png)
-
-
-In the logs, notice that your hello-world action prints - "hello world."
+![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1568391143385_Screenshot+2019-09-13+09.12.12.png)
 
 
-! [] (https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1568391516459_Screenshot+2019-09-13+09.18.30.png)
+Na aba Actions, você vai ter uma execução de workflow para a sua nova **hello-world action**. Vá em frente e clique no seu workflow para ver os logs. 
+
+_Nota: Estes logs são produzidos pela [Checks API](https://developer.github.com/v3/checks/) do GitHub_
+
+![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1570058201382_Screenshot+2019-10-02+16.16.33.png)
 
 
-Congratulations! You created your first Action, and all you had to do was pop up and click a few buttons 😉.
-
-This workflow was started from the `hello.yml` file. 
-
-The workflow name is important and will be used to identify your Action in the logs.
+Nos logs, perceba que a sua action hello-world imprime -"hello world."
 
 
-    # .github / workflows / hello.yml
+![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1568391516459_Screenshot+2019-09-13+09.18.30.png)
+
+
+Parabéns! Você criou a sua primeira Action, e tudo o que você teve que fazer foi aparecer e clicar em alguns botões 😉.
+
+Este workflow foi iniciado a partir do arquivo `hello.yml`. 
+
+O nome do workflow é importante e será usado para identificar sua Action nos logs.
+
+
+    # .github/workflows/hello.yml
     on: push # runs when ever there is a push to any branch of the repo
     name: A workflow for my Hello World Action
     jobs:
@@ -45,49 +45,49 @@ The workflow name is important and will be used to identify your Action in the l
           run: |
             echo "hello"
 
-** About workflows ** 
-You can create a workflow file configured to run on specific events. For more information, see "[Setting Up a Workflow] (https://help.github.com/en/articles/configuring-a-workflow)" and "[Workflow Syntax for GitHub Actions] (https: // help. github.com/en/articles/workflow-syntax-for-github-actions) ".
+**Sobre workflows** 
+Você pode criar um arquivo de workflow configurado para rodar em eventos específicos. Para mais informações, veja "[Configurando um workflow](https://help.github.com/en/articles/configuring-a-workflow)" e "[Sintaxe de Workflow para GitHub Actions](https://help.github.com/en/articles/workflow-syntax-for-github-actions)".
 
-The basics you need to know is that there is an Action ready for you in the `.github / workflows` folder. Inside you will see that the `hello.yml` file defines a workflow of a Softwarea Software Development Lifecycle (CVDS).
+O básico que você precisa saber é que existe uma Action já pronta para você na pasta `.github/workflows`. Dentro dela você você verá que o arquivo `hello.yml` define um workflow de um Ciclo de Vida de Desenvolvimento de Softwarea Software Development Lifecycle (CVDS ou SDLC em inglês). 
 
-See more about the key concepts of [GitHub Actions] (https://help.github.com/en/articles/about-github-actions#core-concepts-for-github-actions).
+Veja mais sobre os principais conceitos das [GitHub Actions](https://help.github.com/en/articles/about-github-actions#core-concepts-for-github-actions).
 
-One thing to watch for workflows is the ** jobs **.
+Uma coisa para prestar atenção sobre workflows são os **jobs**.
 
-A `job` is a task composed of steps. Each job is run on a virtual environment instance created from scratch. You can define dependency rules for how jobs are executed in a workflow file. Jobs may run in parallel or be dependent on the status of a previous job and run in sequence. For example, a workflow might have two sequential jobs that build and test code, where the test job is dependent on the status of the build job. If the build fails, the test job will not run.
+Um `job` é uma tarefa composta por etapas ("steps"). Cada job é rodado em uma instância do ambiente virtual criada do zero. Você pode definir as regras de dependências para como jobs são executados em um arquivo de workflow. Jobs podem rodar em paralelo ou serem dependentes do status de um job anterior e rodar em sequência. Por exemplo, um workflow pode ter dois jobs sequenciais que dão build e testam código, onde o job de teste é dependente do status do job de build. Se o build falhar, o job de teste não irá rodar.
 
-** runs-on **
+**runs-on**
 
-GitHub hosts virtual machines with Linux, macOS, and Windows environments. Each job in a workflow runs on a new instance of the virtual environment. All steps in the job execute on the same instance of the virtual environment, allowing actions in that job to share information using the filesystem.
+O GitHub hospeda máquinas virtuais com ambientes Linux, macOS, e Windows. Cada job em um workflow executa em uma instância nova do ambiente virtual. Todos os passos no job executam na mesma instância do ambiente virtual, permitindo às actions naquele job compartilhar informação utilizando o filesystem.
 
-You can specify the vital environment for each job in a workflow. You can configure each job in different virtual environments or run all jobs in the same environment.
+Você pode especificar o ambiente vitual para cada job em um workflow. Você pode configurar cada job em diferentes ambientes virtuais ou rodar todos os jobs no mesmo ambiente.
 
-** Steps **
+**Steps**
 
-A step is a set of activities performed by a job. Each step in a job runs in the same virtual environment, allowing actions in that job to share information using the filesystem. Steps can run commands or actions.
+Um step (passo) é um conjunto de atividades executadas por um job. Cada step em um job é executado no mesmo ambiente virtual, permitindo às actions naquele job compartilhar informação utilizando o filesystem. Steps podem rodar comandos ou actions.
 
-## Part 1a: Environment Variables
+## Parte 1a: Variáveis de ambiente
 
-Next, let's make our little action a little more advanced by adding a name to the environment variables.
+Em seguida, vamos fazer nossa pequena action um pouco mais avançada adicionando um nome às variáveis de ambiente.
 
         - name: hello-world
           run: |
-            echo "hello $ NAME"
+            echo "hello $NAME"
           env:
             NAME: Mary
 
 
-Committing this change will also trigger the action and you should see the output of your variable in the action logs as `hello Mary`. 
+Comittar essa mudança irá também disparar a action e você deverá ver o output da sua variável nos logs da action como `hello Mary`. 
 
-Now let's use existing environment variables to add your name. e.g. GITHUB_ACTOR.
+Agora nos vamos utilizar variáveis de ambiente já existentes para adicionar o seu nome. ex.: GITHUB_ACTOR.
 
 
         - name: hello-world
           run: |
-            echo "hello $ GITHUB_ACTOR"
+            echo "hello $GITHUB_ACTOR"
 
-See more about the [default environment variables] (https://help.github.com/en/articles/virtual-environments-for-github-actions#default-environment-variables) available for your use. 
+Veja mais sobre as [variáveis de ambiente padrão](https://help.github.com/en/articles/virtual-environments-for-github-actions#default-environment-variables) disponíveis para seu uso. 
 
-You will find in the documentation, in addition to the `GITHUB_ACTOR` variable, the` GITHUB_TOKEN` access variable so that we can perform actions in our own repositories. variables are available for us to perform Actions on our own repos.
+Você irá encontrar na documentação, além da variável `GITHUB_ACTOR`, a variável de acesso (secret) `GITHUB_TOKEN` para que nós possamos realizar ações em nossos próprios repositórios. variables is available for us to perform Actions on our own repos.
 
-[Continue to Part 2] (parte2-issues.md)
+[Continue na Parte 2](parte2-issues.md)
