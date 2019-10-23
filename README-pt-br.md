@@ -3,7 +3,7 @@ Bem-vindo à folha de dicas do Craftwork! Esta página tem tudo o que você prec
 
 ## Part 0: Junte-se a org
 
-Para ter acesso às [Ações do GitHub](https://github.com/features/actions) e acompanhar, você precisará ingressar no [github-craftwork(https://github.com/github-craftwork). Coincidentemente, escrevemos alguma automação para fazer esse trabalho.
+Para ter acesso às [Ações do GitHub](https://github.com/features/actions) e acompanhar, você precisará ingressar no [github-craftwork](https://github.com/github-craftwork). Coincidentemente, escrevemos alguma automação para fazer esse trabalho.
 
 Convide-se para a organização digitando ".invite me" nesta [edição](https://github.com/github-craftwork/python-brasil/issues/3).
 
