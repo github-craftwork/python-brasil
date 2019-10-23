@@ -2,21 +2,19 @@ import os
 import json
 import requests
 
-# event = json.loads(open(os.getenv('GITHUB_EVENT_PATH')))
-# print event 
+event = json.loads(open(os.getenv('GITHUB_EVENT_PATH'), "r"))
+print(event)
+TOKEN = os.getenv('GITHUB_TOKEN')
 
 # comment = event["comment"]["body"]
 comment = ".invite me"
-team_id = 3414353
 # commenter = event["comment"]["user"]["login"]
 commenter = "notBdougie"
+team_id = [3484670]
 
 API_ENDPOINT1 = "https://api.github.com/organizations/55258788/public_members/" + commenter
 API_ENDPOINT2 = "https://api.github.com/users/" + commenter
 API_ENDPOINT3 = "https://api.github.com/orgs/github-craftwork/invitations"
-
-event = open(os.getenv('GITHUB_EVENT_PATH'), "r")
-print(event)
 
 print("-------------------------------------------------")
 
@@ -32,9 +30,9 @@ if ".invite" in comment and len(comment.split()) == 2:
     id = p.json()['id']
     print("ID: " + str(id))
 
-    headers={'Authorization': os.getenv('GITHUB_TOKEN'),
+    headers={'Authorization': 'token ' + TOKEN,
              'Accept': 'application/vnd.github.dazzler-preview+json'}
-    data = {"invitee_id": id, "team_ids": [3484670]}
+    data = {"invitee_id": id, "team_ids": team_ids}
 
     h = requests.post(url = API_ENDPOINT3, data = json.dumps(data), headers = headers)
     print(h.text)
