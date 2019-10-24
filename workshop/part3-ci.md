@@ -133,8 +133,6 @@ Create the following `.github/release-drafter.yml`  file in a repository and com
 **Make a change**
 Navigate to any file in the repo and replace the contents with your something else. 
 
-Change:  Swap out my name with your handle and commit that to master.
-
 As pull requests are merged, a draft release is kept up-to-date listing the changes, ready to publish when you’re ready:
 
 ![Screenshot of generated draft release](https://github.com/toolmantim/release-drafter/raw/master/design/screenshot.png)
@@ -150,8 +148,5 @@ You can publish you Python Package by using the starter templating in the Action
 
 ![python package workflow ](https://user-images.githubusercontent.com/5713670/67405981-fb3c8580-f5a4-11e9-8dbe-4318cf7a4e9b.png)
 
-
-**Create a PR for this workflow**
-Commit this workflow to a new branch and open the pull request.
 
 [Continue Part 4](part4-bonus.md)
