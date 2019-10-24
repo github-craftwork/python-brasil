@@ -22,4 +22,4 @@ Tente descobrir como tudo isso funcionou enquanto esperamos o restante do grupo 
 
 Depois de ter pontificado o suficiente, compare seus pensamentos com esta explicação - clique no link abaixo para a explicação aqui.
 
-[Consulte a explicação] (workshop/parte0-explanação.md) ou [inicie a parte 1 deste tutorial](workshop/parte1-hello-world.md)
+[Consulte a explicação](workshop/pt-br/parte0-explanação.md) ou [inicie a parte 1 deste tutorial](workshop/pt-br/parte1-hello-world.md)
