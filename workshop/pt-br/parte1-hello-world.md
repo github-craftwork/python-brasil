@@ -1,26 +1,26 @@
 
 # Parte 1: Hello World
 
-Comece pela criação de um [ novo respositório sandbox](https://github.com/organizations/github-craftwork/repositories/new) na org github-craftwork, para manter tudo organizado. 
+Comece pela criação de um [ novo respositório sandbox](https://github.com/organizations/github-craftwork/repositories/new) na organização github-craftwork, para manter tudo organizado. 
 
 ![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1570058137257_Screenshot+2019-10-02+16.12.56.png)
 
 
 _Por favor, adicione o seu nome no repositório, ex.: **bdougie-sandbox**_
 
-O seu repositório inicializado já tem uma action disparada. Clique na aba Actions para ver o que acontece. 
+O seu repositório inicializado já tem uma ação disparada. Clique na aba Ação para ver o que acontece. 
 
 ![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1568391143385_Screenshot+2019-09-13+09.12.12.png)
 
 
-Na aba Actions, você vai ter uma execução de workflow para a sua nova **hello-world action**. Vá em frente e clique no seu workflow para ver os logs. 
+Na aba Ação, você vai ter uma execução de workflow para a sua nova **hello-world action**. Vá em frente e clique no seu workflow para ver os logs. 
 
 _Nota: Estes logs são produzidos pela [Checks API](https://developer.github.com/v3/checks/) do GitHub_
 
 ![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1570058201382_Screenshot+2019-10-02+16.16.33.png)
 
 
-Nos logs, perceba que a sua action hello-world imprime -"hello world."
+Nos logs, perceba que a sua ação hello-world imprime -"hello world."
 
 
 ![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1568391516459_Screenshot+2019-09-13+09.18.30.png)
@@ -52,9 +52,9 @@ O básico que você precisa saber é que existe uma Action já pronta para você
 
 Veja mais sobre os principais conceitos das [GitHub Actions](https://help.github.com/en/articles/about-github-actions#core-concepts-for-github-actions).
 
-Uma coisa para prestar atenção sobre workflows são os **jobs**.
+Uma coisa para se prestar atenção sobre workflows são os **jobs**.
 
-Um `job` é uma tarefa composta por etapas ("steps"). Cada job é rodado em uma instância do ambiente virtual criada do zero. Você pode definir as regras de dependências para como jobs são executados em um arquivo de workflow. Jobs podem rodar em paralelo ou serem dependentes do status de um job anterior e rodar em sequência. Por exemplo, um workflow pode ter dois jobs sequenciais que dão build e testam código, onde o job de teste é dependente do status do job de build. Se o build falhar, o job de teste não irá rodar.
+Um `job` é uma tarefa composta por etapas ("steps"). Cada job é rodado em uma instância do ambiente virtual criada do zero. Você pode definir as regras de dependências para como os jobs serão executados em um arquivo de workflow. Jobs podem rodar em paralelo ou serem dependentes do status de um job anterior e rodar em sequência. Por exemplo, um workflow pode ter dois jobs sequenciais que dão build e testam código, onde o job de teste é dependente do status do job de build. Se o build falhar, o job de teste não irá rodar.
 
 **runs-on**
 
