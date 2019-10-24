@@ -3,7 +3,7 @@
 
 _Note: The following section requires you to create a repository on your own account. You will need to ensure you have access to the [Actions](https://github.com/features/actions) page._
 
-Next let’s start a new project in your personal repos (**not the github-craftwork org**) using the [github-craftwork/ci-template](https://github.com/github-craftwork/ci-template/generate). The contents of the project include have been taken from the Plurasight Intro that finds out what the current week number it is today. 
+Next let’s start a new project in your personal repos (**not the github-craftwork org**) using the [github-craftwork/ci-python-template](https://github.com/github-craftwork/ci-python-template/generate). The contents of the project include have been taken from the Plurasight Intro that finds out what the current week number it is today. 
 
 ![](https://user-images.githubusercontent.com/5713670/67403798-fb875180-f5a1-11e9-8989-2650dcbb20fd.png)
 
