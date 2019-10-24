@@ -67,7 +67,7 @@ Because your new Actions CI is running on everything push, you should already ha
 ![python package workflow](https://user-images.githubusercontent.com/5713670/67407777-8d458d80-f5a7-11e9-8827-40d19dde78ad.png)
 
 
-Note that we  will need to a test to run as part of our CI, Find the `index.test.js` file with the contents from below:
+Note that we will need to write a test to run as part of our CI, Find the `00_empty_test.py` file with the contents from below:
 
 ```py
 # tests/00_empty_test.py
@@ -85,7 +85,8 @@ def test_empty():
 
 The result of that last push to master should look like this image:
 
-![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1570060795895_Screenshot+2019-10-02+16.59.26.png)
+![](https://user-images.githubusercontent.com/4427768/67440385-8599df00-f5cf-11e9-9152-e0f19a5e8527.png)
+
 
 Add the above test using the UI, but instead of committing directly to the master branch, open a pull request to trigger you CI workflow again.. 
 
@@ -132,8 +133,6 @@ Create the following `.github/release-drafter.yml`  file in a repository and com
 **Make a change**
 Navigate to any file in the repo and replace the contents with your something else. 
 
-Change:  Swap out my name with your handle and commit that to master.
-
 As pull requests are merged, a draft release is kept up-to-date listing the changes, ready to publish when you’re ready:
 
 ![Screenshot of generated draft release](https://github.com/toolmantim/release-drafter/raw/master/design/screenshot.png)
@@ -150,7 +149,4 @@ You can publish you Python Package by using the starter templating in the Action
 ![python package workflow ](https://user-images.githubusercontent.com/5713670/67405981-fb3c8580-f5a4-11e9-8dbe-4318cf7a4e9b.png)
 
 
-**Create a PR for this workflow**
-Commit this workflow to a new branch and open the pull request.
-
-[Continue Part 4](parte4-bonus.md)
+[Continue Part 4](part4-bonus.md)
