@@ -12,4 +12,4 @@ Clique nos links para ver o código, cada um trabalha de forma diferente, e isto
 
 </details>
 
-Agora que você viu e entendeu está Ação na prática, vamos implementar nossa primeira Ação. Vá para a [Parte 1 desta oficina](part1-hello-world.md).
+Agora que você viu e entendeu está Ação na prática, vamos implementar nossa primeira Ação. Vá para a [Parte 1 desta oficina](parte1-hello-world.md).
