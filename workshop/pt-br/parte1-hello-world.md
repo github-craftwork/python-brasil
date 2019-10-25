@@ -8,12 +8,12 @@ Comece pela criação de um [ novo respositório sandbox](https://github.com/org
 
 _Por favor, adicione o seu nome no repositório, ex.: **bdougie-sandbox**_
 
-O seu repositório inicializado já tem uma ação disparada. Clique na aba Ação para ver o que acontece. 
+O seu repositório inicializado já tem uma ação disparada. Clique na aba Actions para ver o que acontece. 
 
 ![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1568391143385_Screenshot+2019-09-13+09.12.12.png)
 
 
-Na aba Ação, você vai ter uma execução de workflow para a sua nova **hello-world action**. Vá em frente e clique no seu workflow para ver os logs. 
+Na aba Actions, você vai ter concluído com sucesso a execução de workflow para a sua nova **hello-world action**. Vá em frente e clique no seu workflow para ver os logs. 
 
 _Nota: Estes logs são produzidos pela [Checks API](https://developer.github.com/v3/checks/) do GitHub_
 
@@ -48,7 +48,7 @@ O nome do workflow é importante e será usado para identificar sua Action nos l
 **Sobre workflows** 
 Você pode criar um arquivo de workflow configurado para rodar em eventos específicos. Para mais informações, veja "[Configurando um workflow](https://help.github.com/en/articles/configuring-a-workflow)" e "[Sintaxe de Workflow para GitHub Actions](https://help.github.com/en/articles/workflow-syntax-for-github-actions)".
 
-O básico que você precisa saber é que existe uma Action já pronta para você na pasta `.github/workflows`. Dentro dela você você verá que o arquivo `hello.yml` define um workflow de um Ciclo de Vida de Desenvolvimento de Softwarea Software Development Lifecycle (CVDS ou SDLC em inglês). 
+O básico que você precisa saber é que existe uma Action já pronta para você na pasta `.github/workflows`. Dentro dela você você verá que o arquivo `hello.yml` define um workflow de um Ciclo de Vida de Desenvolvimento de Software (CVDS ou SDLC - Software Development Lifecycle - em inglês). 
 
 Veja mais sobre os principais conceitos das [GitHub Actions](https://help.github.com/en/articles/about-github-actions#core-concepts-for-github-actions).
 
@@ -77,9 +77,9 @@ Em seguida, vamos fazer nossa pequena action um pouco mais avançada adicionando
             NAME: Mary
 
 
-Comittar essa mudança irá também disparar a action e você deverá ver o output da sua variável nos logs da action como `hello Mary`. 
+Comittar essa mudança também irá disparar a action e você deverá ver o output da sua variável nos logs da action como `hello Mary`. 
 
-Agora nos vamos utilizar variáveis de ambiente já existentes para adicionar o seu nome. ex.: GITHUB_ACTOR.
+Agora nós vamos utilizar variáveis de ambiente já existentes para adicionar o seu nome. ex.: GITHUB_ACTOR.
 
 
         - name: hello-world
@@ -88,6 +88,6 @@ Agora nos vamos utilizar variáveis de ambiente já existentes para adicionar o 
 
 Veja mais sobre as [variáveis de ambiente padrão](https://help.github.com/en/articles/virtual-environments-for-github-actions#default-environment-variables) disponíveis para seu uso. 
 
-Você irá encontrar na documentação, além da variável `GITHUB_ACTOR`, a variável de acesso (secret) `GITHUB_TOKEN` para que nós possamos realizar ações em nossos próprios repositórios. variables is available for us to perform Actions on our own repos.
+Você irá encontrar na documentação, além da variável `GITHUB_ACTOR`, a variável de acesso (secret) `GITHUB_TOKEN` para que nós possamos realizar ações em nossos próprios repositórios.
 
 [Continue na Parte 2](parte2-issues.md)
