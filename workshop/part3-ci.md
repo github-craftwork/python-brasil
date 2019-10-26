@@ -9,6 +9,7 @@ Next let’s start a new project in your personal repos (**not the github-craftw
 
 
 **Create a CI pull requests**
+
 To develop a GitHub Workflow process that employs Actions to automate the Continuous 
 Integration process, you can begin by adding starter workflow file to the `.github` directory. On the initial view of your repository, find and navigate to the **Actions** tab.
 
@@ -27,6 +28,7 @@ The Actions Workflow wizard will install the sample workflow selected in your re
 Commit the `pythonpackage.yml` file to the master branch to complete this process of creating our first CI workflow. 
 
 The `.github/workflows/` folder will include the contents from below:
+
 name: Python application
 
 ```
@@ -88,7 +90,7 @@ The result of that last push to master should look like this image:
 ![](https://user-images.githubusercontent.com/4427768/67440385-8599df00-f5cf-11e9-9152-e0f19a5e8527.png)
 
 
-Add the above test using the UI, but instead of committing directly to the master branch, open a pull request to trigger you CI workflow again.. 
+Add the above test using the UI, but instead of committing directly to the master branch, open a pull request to trigger you CI workflow again. 
 
 We have not created a pull request until now, so please take note that you can see all the workflows triggering through a GitHub [Check Suite](https://developer.github.com/v3/checks/). All Action Workflows are being powered by this API feature. And since we are on the subject the GitHub Actions bot is built on the [GitHub App](https://developer.github.com/apps/) framework that has already popularized by a number of our [Marketplace](https://github.com/marketplace) and Ecosystem partners.
 
