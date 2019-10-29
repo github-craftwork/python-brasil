@@ -1,13 +1,13 @@
 # Introdução
-Bem-vindo à folha de dicas do Craftwork! Esta página tem tudo o que você precisa para concluir o tutorial. Se você não puder estar presente para a próxima parte deste tutorial ou tiver perguntas que não foram respondidas pelo [FAQ](workshop/FAQ.md), não tenha medo de levantar a mão e nos perguntar!
+Bem-vindo à página de dicas do Craftwork! Esta página tem tudo o que você precisa para concluir o tutorial da Craftwork. Se você não puder estar presente para a próxima parte deste tutorial ou tiver perguntas que não foram respondidas pelo [FAQ](workshop/FAQ.md), não tenha medo de levantar a mão e nos perguntar!
 
-## Part 0: Junte-se a organização
+## Part 0: Junte-se à organização
 
-Para ter acesso às [Ações do GitHub](https://github.com/features/actions) e conseguir acompanhar, você precisará ingressar na organização [github-craftwork](https://github.com/github-craftwork). Coincidentemente, escrevemos alguma automação para fazer isto funcionar.
+Para ter acesso ao [GitHub Actions](https://github.com/features/actions) e conseguir acompanhar, você precisará ingressar na organização [github-craftwork](https://github.com/github-craftwork). Coincidentemente, escrevemos alguma automação para fazer isto funcionar.
 
 Convide-se para a organização digitando ".invite me" na página desta [issue](https://github.com/github-craftwork/python-brasil/issues/3).
 
-Depois que você tiver enviado seu comentário, vá para a [guia Actions](https://github.com/github-craftwork/python-brasil/actions?workflow=Invite+a+contributor) do repositório para encontrar a ação acionada pelo seu comentário.
+Depois que você tiver enviado seu comentário, vá à [guia Actions](https://github.com/github-craftwork/python-brasil/actions?workflow=Invite+a+contributor) do repositório para encontrar a ação acionada pelo seu comentário.
 
 Observe que isso pode levar até 30 segundos para mostrar. Certifique-se também de verificar no seu e-mail este convite:
 ![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1569470503869_Screenshot+2019-09-25+21.01.27.png)
