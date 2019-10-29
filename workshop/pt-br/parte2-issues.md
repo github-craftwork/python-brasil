@@ -3,7 +3,7 @@
 ## Parte 2a: Madlibs com issues 
 Trabalhar com issues pode ser trivial, adicione a action abaixo e o ISSUE_TEMPLATE ao seu projeto para alguma diversão com as issues.
 
-**Commite madlib.yml no master**
+**Commit madlib.yml na branch master**
 Crie um arquivo `madlib.yml` na sua pasta `.github/workflows` com o seguinte conteúdo:
 
 

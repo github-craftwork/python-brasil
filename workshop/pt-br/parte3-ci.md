@@ -1,32 +1,33 @@
 
-# Part 3: Continuous Integration (CI) 
+# Parte 3: Integração Contínua (Continuous Integration - CI) 
 
-_Note: The following section requires you to create a repository on your own account. You will need to ensure you have access to the [Actions](https://github.com/features/actions) page._
+_Nota: A seção a seguir necessita que você tenha criado um repositório na sua própria conta. Você precisa garantir que tenha acesso a página do Github [Actions](https://github.com/features/actions)._
 
-Next let’s start a new project in your personal repos (**not the github-craftwork org**) using the [github-craftwork/ci-template](https://github.com/github-craftwork/ci-template/generate). The contents of the project include have been taken from the Plurasight Intro that finds out what the current week number it is today. 
+A seguir vamos iniciar um novo projeto nos seus repositórios pessoais (**não os da organização github-craftwork**) usando o template [github-craftwork/ci-template](https://github.com/github-craftwork/ci-template/generate). Os conteúdos do projeto foram obtidos da introdução Plurasight, que descobre qual o número da semana atual é hoje. 
 
 ![](https://user-images.githubusercontent.com/5713670/67403798-fb875180-f5a1-11e9-8989-2650dcbb20fd.png)
 
 
-**Create a CI pull requests**
-To develop a GitHub Workflow process that employs Actions to automate the Continuous 
-Integration process, you can begin by adding starter workflow file to the `.github` directory. On the initial view of your repository, find and navigate to the **Actions** tab.
+**Criar CIs pull requests**
+
+Para desenvolver um processo de Workflow no GitHub que aplica Actions para automatizar o processo de integração contínua, você pode começar adicionando um arquivo de workflow inicial no diretório `.github`. Na tela inicial do seu repositório, encontre e navegue até a aba **Actions**.
 
 
 ![](https://user-images.githubusercontent.com/5713670/67405421-41ddb000-f5a4-11e9-8cb4-94f22aed4296.png)
 
 
-On the Actions page you should see 3 Python workflow options. Find the Python Application workflow option and click the `Set up this workflow` button.
+Na página de Actions você deve ver 3 opções de workflow Python. Encontre a opção Python Application workflow e clique no botão `Set up this workflow`.
 
-_Note: The [actions/starter-workflows](https://github.com/actions/starter-workflows) repository contains many sample workflow files._
+_Nota: O repositório [actions/starter-workflows](https://github.com/actions/starter-workflows) contém muitos arquivos workflow de amostras._
 
-The Actions Workflow wizard will install the sample workflow selected in your repo within the `.github` folder. You may edit the name of the file and its contents on the screen provided.
+O assistente de Workflow Actions irá instalar a amostra do workflow selecionado no seu repositório, dentro do diretório `.github`. Você pode editar o nome do arquivo e o seu conteúdo na tela fornecida.
 
 ![Screenshot 2019-10-09 17 02 03](https://user-images.githubusercontent.com/5713670/67406658-e01e4580-f5a5-11e9-8d8c-6749ae6f9720.png)
 
-Commit the `pythonpackage.yml` file to the master branch to complete this process of creating our first CI workflow. 
+Faça commit do arquivo `pythonpackage.yml` para o branch master para completar este processo de criação do nosso primeiro workflow de CI. 
 
-The `.github/workflows/` folder will include the contents from below:
+O diretório `.github/workflows/` irá incluir o conteúdo abaixo:
+
 name: Python application
 
 ```
@@ -60,14 +61,14 @@ jobs:
         pytest
 ```
 
-_Take note that our workflow is running a strategy with 3 versions of python. This will be important to know later._ 
+_Observe que o nosso workflow está rodando com uma estratégia de 3 versões de python. Será importante saber isso posteriormente._ 
 
-Because your new Actions CI is running on everything push, you should already have a workflow running. 
+Devido ao fato da nova Action de CI estar rodando a cada push, você já deve ter um workflow rodando.
 
 ![python package workflow](https://user-images.githubusercontent.com/5713670/67407777-8d458d80-f5a7-11e9-8827-40d19dde78ad.png)
 
 
-Note that we will need to write a test to run as part of our CI, Find the `00_empty_test.py` file with the contents from below:
+Perceba que precisaremos escrever um teste para rodar como parte do nosso CI. Encontre o arquivo `00_empty_test.py` com o conteúdo abaixo:
 
 ```py
 # tests/00_empty_test.py
@@ -83,24 +84,24 @@ def test_empty():
 
 ```
 
-The result of that last push to master should look like this image:
+O resultado do último push para o branch master deve ser parecido com o desta imagem:
 
 ![](https://user-images.githubusercontent.com/4427768/67440385-8599df00-f5cf-11e9-9152-e0f19a5e8527.png)
 
 
-Add the above test using the UI, but instead of committing directly to the master branch, open a pull request to trigger you CI workflow again.. 
+Adicione o teste acima utilizando a UI, mas ao invés de commitar diretamente no branch master, abra um pull request para disparar o workflow de CI novamente. 
 
-We have not created a pull request until now, so please take note that you can see all the workflows triggering through a GitHub [Check Suite](https://developer.github.com/v3/checks/). All Action Workflows are being powered by this API feature. And since we are on the subject the GitHub Actions bot is built on the [GitHub App](https://developer.github.com/apps/) framework that has already popularized by a number of our [Marketplace](https://github.com/marketplace) and Ecosystem partners.
+Nós não criamos um pull request até agora, então por favor perceba que você pode ver todos os workflows sendo disparados pelo GitHub [Check Suite](https://developer.github.com/v3/checks/). Todas as Action dos Workflows estão sendo alimentadas pela API desta funcionalidade. E como estamos falando do assunto, o bot do GitHub Actions é construído usando o framework [GitHub App](https://developer.github.com/apps/), que já ficou popular entre um grande número do nosso [Marketplace](https://github.com/marketplace) e ecossistema de parceiros.
 
 ![CI pass](https://user-images.githubusercontent.com/5713670/67408875-3b9e0280-f5a9-11e9-8751-da299236cbbb.png)
 
-Once all test have passed, merge the pull request and let us move on to complete the next step. 
+Assim que todos os testes tiverem passado, faça merge do pull request e vamos seguir em frente para completar o próximo passo. 
     
-## Part 3b: Draft and Auto publish a release
-CI is often coupled with the idea of Continuous Delivery (CD). The next two sections will cover automating your projects release management.
+## Parte 3b: Rascunho e Auto publicar uma versão release
+CI é frequentemente acoplada com a ideia de Entrega contínua (do inglês Continuous Delivery - CD). As próximas duas seções cobrirão automatizar seus projetos com gerenciamento de versões release.
 
-**Add release workflow**
-You can use the [Release Drafter GitHub Action](https://github.com/marketplace/actions/release-drafter) in a [GitHub Actions Workflow](https://help.github.com/en/articles/about-github-actions) by configuring a YAML-based workflow file, e.g. `.github/workflows/release-management.yml`, with the following:
+**Adicione seu workflow de release**
+Você pode usar a [Action do Github para gerar rascunhos de Releases](https://github.com/marketplace/actions/release-drafter) em um [Workflow de Actions](https://help.github.com/en/articles/about-github-actions) através da configuração de um arquivo YAML para workflow, ex: `.github/workflows/release-management.yml`, com o seguinte conteúdo:
 
 
     name: Release Management
@@ -120,33 +121,33 @@ You can use the [Release Drafter GitHub Action](https://github.com/marketplace/a
             env:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-Once you’ve added Release Drafter to your repository, it must be enabled by adding a `.github/release-drafter.yml` configuration file to each repository.
+Uma vez que você tenha adicionado o Rascunho para Releases ao seu repositório, ele deve ser habilitado adicionando um arquivo de configuração `.github/release-drafter.yml` para cara repositório.
 
-**Add release template**
-Create the following `.github/release-drafter.yml`  file in a repository and commit to your master branch:
+**Adicione o template de release**
+Crie o seguinte arquivo `.github/release-drafter.yml` em um repositório e faça commit na sua branch master:
 
     template: |
       ## What’s Changed
     
       $CHANGES
 
-**Make a change**
-Navigate to any file in the repo and replace the contents with your something else. 
+**Faça uma mudança**
+Navegue até qualquer arquivo no repositório and mude o conteúdo para algo direrente. 
 
-As pull requests are merged, a draft release is kept up-to-date listing the changes, ready to publish when you’re ready:
+Conforme os pull requests são mergeados, um rascunho da release é mantido atualizado com as mudanças, pronto para ser publicado quando você estiver pronto:
 
 ![Screenshot of generated draft release](https://github.com/toolmantim/release-drafter/raw/master/design/screenshot.png)
 
 
-To test this workflow, edit your draft using the existing tag created for it. Once completed, move on to the next step in the project to complete this step.
+Para testar este workflow, edite o seu rascunho usando a tag existente que foi criada para ele. Uma vez concnluído, siga em frente para o próximo passo no projeto para concluir esta etapa.
 
 ![](https://paper-attachments.dropbox.com/s_CDDCC4EC3C7C8C14E8A73684CA9909721C965A1258B4380D90B28E1A4E030470_1569513609522_Screenshot+2019-09-26+08.59.53.png)
 
 
-**Publish Python Package**
-You can publish you Python Package by using the starter templating in the Actions wizard.
+**Publicar o seu pacote python**
+Você pode publicar seu pacote python usando o iniciador de templates no assistente de Actions.
 
 ![python package workflow ](https://user-images.githubusercontent.com/5713670/67405981-fb3c8580-f5a4-11e9-8dbe-4318cf7a4e9b.png)
 
 
-[Continue Part 4](part4-bonus.md)
+[Continue para a Parte 4](part4-bonus.md)
